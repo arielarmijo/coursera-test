@@ -6,18 +6,19 @@ angular.module('LunchCheckApp', []).controller('LunchCheckController', LunchChec
 LunchCheckController.$inject = ['$scope'];
 
 function LunchCheckController($scope) {
-  
+  $scope.dishes = "";
   $scope.check = function () {
     var msg;
-    if ($scope.dishes == undefined || $scope.dishes == "") {
+    var dishes = $scope.dishes.split(",").map(item => item.trim()).filter(item => item != "");
+    var n = dishes.length;
+    if (n == 0) {
       $scope.msgStyle = {"color": "red"};
-      msg = "Please enter data first" ;
+      $scope.message = "Please enter data first" ;
     } else {
-      var dishes = $scope.dishes.split(",").map(item => item.trim()).filter(item => item != "");
       $scope.msgStyle = {"color": "green"};
-      msg = dishes.length <= 3 ? "Enjoy!" : "Too much!" ;
+      $scope.message = n <= 3 ? "Enjoy!" : "Too much!" ;
     }
-    $scope.message = msg;
+    console.log(dishes);
   }
 }
 

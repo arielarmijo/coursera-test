@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="styles/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-  <script src="javascripts/app.js"></script>
+  <script src="scripts/app.js"></script>
   <style>
     .message {
       font-size: 1.3em;
@@ -24,6 +24,7 @@
       <!-- do NOT consider an empty item -->
       <input id="lunch-menu" type="text" placeholder="list comma separated dishes you usually have for lunch"
         class="form-control" ng-model="dishes">
+      <p>Do not consider empty items</p>
     </div>
     <div class="form-group">
       <button class="btn btn-default" ng-click="check()">Check If Too Much</button>

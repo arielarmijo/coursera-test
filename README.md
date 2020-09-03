@@ -7,6 +7,6 @@
 - [Assignment 5](https://cochayuyo.github.io/coursera-test/assignment5/index.html)
 
 ## SPA with AngularJS
-- [Assignment 1](https://cochayuyo.github.io/coursera-test/spa_angularjs/assignment1/index.html)
+- [Assignment 1](https://cochayuyo.github.io/coursera-test/spa_angularjs/assignment1/)
 
 
