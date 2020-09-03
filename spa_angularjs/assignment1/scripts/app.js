@@ -12,9 +12,11 @@ function LunchCheckController($scope) {
     var dishes = $scope.dishes.split(",").map(item => item.trim()).filter(item => item != "");
     var n = dishes.length;
     if (n == 0) {
+      $scope.inputStyle = {"border-color": "red"};
       $scope.msgStyle = {"color": "red"};
       $scope.message = "Please enter data first" ;
     } else {
+      $scope.inputStyle = {"border-color": "green"};
       $scope.msgStyle = {"color": "green"};
       $scope.message = n <= 3 ? "Enjoy!" : "Too much!" ;
     }
