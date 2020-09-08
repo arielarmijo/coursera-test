@@ -8,5 +8,6 @@
 
 ## SPA with AngularJS
 - [Assignment 1](https://cochayuyo.github.io/coursera-test/spa_angularjs/assignment1/)
+- [Assignment 2](https://cochayuyo.github.io/coursera-test/spa_angularjs/assignment2/)
 
 
