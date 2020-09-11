@@ -8,16 +8,20 @@
 
     NarrowItDownController.$inject = ['MenuSearchService'];
     function NarrowItDownController(MenuSearchService) {
-        var ctrl = this;
-        ctrl.searchTerm = "";
-        ctrl.search = function () {
-            MenuSearchService.getMatchedMenuItems(ctrl.searchTerm).then(function (response) {
-                ctrl.found = response;
+        var menu = this;
+        menu.searchTerm = "";
+        menu.search = function () {
+            MenuSearchService.getMatchedMenuItems(menu.searchTerm).then(function (response) {
                 console.log(response);
+                menu.found = response;
+                if (response.length == 0)
+                    menu.message = "Nothing found!";
+                else
+                    menu.message = "";
             });
         }
-        ctrl.removeItem = function (index) {
-            ctrl.found.splice(index,1);
+        menu.removeItem = function (index) {
+            menu.found.splice(index,1);
         }
     }
 
@@ -33,7 +37,7 @@
                 var foundItems = [];
                 var searchTermRegex = new RegExp(searchTerm, "i");
                 result.data.menu_items.forEach(item => {
-                    if (searchTermRegex.test(item.description))
+                    if (searchTerm && searchTermRegex.test(item.description))
                         foundItems.push(item);
                 });;
                 return foundItems;
@@ -43,8 +47,18 @@
 
     function FoundItems() {
         var ddo = {
-            templateUrl: "foundItems.html"
+            restrict: 'E',
+            templateUrl: 'foundItems.html',
+            scope: {
+                foundItems: '<',
+                onEmpty: '<',
+                onRemove: '&'
+            },
+            controller: NarrowItDownController,
+            controllerAs: 'menu',
+            bindToController: true
         };
+
         return ddo;
     }
 
