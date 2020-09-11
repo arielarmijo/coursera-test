@@ -1,6 +1,6 @@
 <ul>
     <li ng-repeat="item in menu.foundItems">
-        {{item.name}} ({{item.short_name}}): {{item.description}} <button ng-click="menu.onRemove({index: $index});">Don't want this one!</button>
+        {{item.name}} ({{item.short_name}}): {{item.description}} <button class="btn btn-danger" ng-click="menu.onRemove({index: $index});">Don't want this one!</button>
     </li>
 </ul>
 <div class="alert alert-danger" ng-if="menu.onEmpty">{{menu.onEmpty}}</div>
