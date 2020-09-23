@@ -1,0 +1,11 @@
+a:hover {
+  text-decoration: none;
+}
+
+li[ui-sref]:hover {
+  list-style-type: "→";
+  /* display: inline-block; */
+  color: rgb(0, 123, 255);
+  cursor: pointer;
+  padding-left: 5px;
+}
