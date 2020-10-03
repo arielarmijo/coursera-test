@@ -1,7 +1,6 @@
 <div class="signup">
     <h2 class="form-signup-heading"><span class="glyphicon glyphicon-user"></span> Sign Up</h2>
-    <form id="signupForm" name="signupForm" novalidate
-        class="ng-pristine ng-invalid ng-invalid-required ng-valid-email ng-valid-pattern">
+    <form id="signupForm" name="signupForm" novalidate>
         <div class="form-group">
             <label for="firstName">First Name</label>
             <input type="text" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
@@ -24,7 +23,7 @@
             <input type="email"
                 class="form-control ng-pristine ng-untouched ng-empty ng-valid-email ng-invalid ng-invalid-required"
                 id="emailAddress" name="emailAddress" placeholder="Email" ng-model="signupCtrl.userInfo.emailAddress"
-                required="">
+                required>
             <span ng-if="signupForm.emailAddress.$invalid && signupForm.emailAddress.$touched">
                 Invalid email
             </span>
