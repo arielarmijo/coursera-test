@@ -6,6 +6,12 @@
     padding: 50px;
   }
 
+.signup h2 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
 #signupForm {
     margin: 25px;
     padding: 25px;
@@ -15,7 +21,7 @@
     border-radius: 5px;
 }
 
-.signup span {
+form span {
     color: red;
 }
 .ng-touched.ng-valid {
