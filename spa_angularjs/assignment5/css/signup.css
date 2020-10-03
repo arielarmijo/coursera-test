@@ -1,0 +1,27 @@
+.signup {
+    box-shadow: 0 0 50px #3F0C1F;
+    border: 2px solid #3F0C1F;
+    background-color: #f6b319;
+    margin: 50px;
+    padding: 50px;
+  }
+
+#signupForm {
+    margin: 25px;
+    padding: 25px;
+    box-shadow: 0 0 10px #3F0C1F;
+    border: 1px solid #3F0C1F;
+    background-color: #61122F;
+    border-radius: 5px;
+}
+
+.signup span {
+    color: red;
+}
+.ng-touched.ng-valid {
+    border: 2px green solid;
+}
+  
+.ng-touched.ng-invalid {
+    border: 2px red solid;
+  }
