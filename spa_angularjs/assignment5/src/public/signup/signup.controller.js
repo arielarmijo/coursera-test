@@ -12,12 +12,6 @@
         ctrl.validShortCode = false;
         ctrl.itemSearched = false;
         ctrl.basePath = ApiPath;
-        ctrl.userInfo.firstName = "Ariel";
-        ctrl.userInfo.lastName = "Armijo";
-        ctrl.userInfo.emailAddress = "arielarmijo@yahoo.es";
-        ctrl.userInfo.firstName = "Ariel";
-        ctrl.userInfo.phoneNumber = "111-111-1111";
-        ctrl.userInfo.favoriteDish = "L1";
 
         ctrl.setMyinfo = function() {
             MyInfoService.setMyinfo(ctrl.userInfo);
