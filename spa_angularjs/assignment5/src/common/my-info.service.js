@@ -11,7 +11,6 @@
 
         service.setMyinfo = function(myInfo) {
             service.myInfo = myInfo;
-            console.log('MyInfoService.setMyinfo() - myInfo:', service.myInfo);
         };
 
         service.getMyinfo = function () {
