@@ -49,7 +49,7 @@
         <button class="btn btn-success" ng-disabled="signupForm.$invalid" ng-click="signupCtrl.setMyinfo()"
             disabled="disabled">Submit</button>
     </form>
-    <div class="signup-saved" ng-if="signupCtrl.saved">
+    <div ng-if="signupCtrl.saved">
         <p class="alert alert-success">Your information has been saved.</p>
     </div>
 </div>

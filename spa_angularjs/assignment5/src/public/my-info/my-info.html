@@ -1,30 +1,35 @@
-<div class="container my-info">
-    <h2 id="menu-categories-title" class="text-center"><span class="glyphicon glyphicon-info-sign"></span> My Info</h2>
-    
-    <div class="myinfo" ng-if="myInfoCtrl.saved">
-        <div>
-            <dl class="dl-horizontal">
-                <dt>First Name:</dt>
-                <dd>{{myInfoCtrl.userInfo.firstName}}</dd>
-                <dt>Last Name:</dt>
-                <dd>{{myInfoCtrl.userInfo.lastName}}</dd>
-                <dt>Email:</dt>
-                <dd>{{myInfoCtrl.userInfo.emailAddress}}</dd>
-                <dt>Phone:</dt>
-                <dd>{{myInfoCtrl.userInfo.phoneNumber}}</dd>
-                <dt>Favorite Dish:</dt>
-                <dd>{{myInfoCtrl.userInfo.favoriteDish}}</dd>
-            </dl>
-        </div>
-        <div class="fav-dish">
-            <menu-item menu-item="myInfoCtrl.userInfo.MenuItem"></menu-item>
+<div class="container">
+        
+        <h2 id="menu-categories-title" class="text-center">
+            <span class="glyphicon glyphicon-info-sign"></span> My Info
+        </h2>
+
+        <div class="myinfo" ng-if="myInfoCtrl.saved">
+            <div>
+                <dl class="dl-horizontal">
+                    <dt>First Name:</dt>
+                    <dd>{{myInfoCtrl.userInfo.firstName}}</dd>
+                    <dt>Last Name:</dt>
+                    <dd>{{myInfoCtrl.userInfo.lastName}}</dd>
+                    <dt>Email:</dt>
+                    <dd>{{myInfoCtrl.userInfo.emailAddress}}</dd>
+                    <dt>Phone:</dt>
+                    <dd>{{myInfoCtrl.userInfo.phoneNumber}}</dd>
+                    <dt>Favorite Dish:</dt>
+                    <dd>{{myInfoCtrl.userInfo.favoriteDish}}</dd>
+                </dl>
+            </div>
+            <div class="fav-dish">
+                <menu-item menu-item="myInfoCtrl.userInfo.MenuItem"></menu-item>
+            </div>
         </div>
     </div>
-    
+
     <div class="container text-center">
         <div class="alert alert-warning" ng-if="!myInfoCtrl.saved">
             <h2>Not Signed Up Yet.</h2>
             <button type="button" ui-sref="public.signup" class="btn btn-primary">Sign up Now!</button>
         </div>
     </div>
+
 </div>
